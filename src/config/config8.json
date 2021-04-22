@@ -1,0 +1,21 @@
+{
+    "train_id_name": "0421_1",
+    "model_name": "kykim/bert-kor-base",
+    "train_data_path": "/opt/ml/input/data/train/train_enr.tsv",
+    "valid_data_path": "/opt/ml/input/data/train/valid_enr.tsv",
+    "train_args": {
+        "save_total_limit": 3,
+        "save_steps": 100,
+        "num_train_epochs": 100,
+        "learning_rate": 5e-5,
+        "per_device_train_batch_size": 32,
+        "per_device_eval_batch_size": 16,
+        "warmup_steps": 150,
+        "weight_decay": 0.01,
+        "logging_dir": "./logs",
+        "logging_steps": 100,
+        "evaluation_strategy": "epoch",
+        "load_best_model_at_end": "True"
+    },
+    "early_stopping_patience": 5
+}

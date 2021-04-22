@@ -1,0 +1,24 @@
+{
+    "train_id_name": "0422_3",
+    "model_name": "xlm-roberta-large",
+    "train_data_path": "/opt/ml/input/data/train/train_no_ner.tsv",
+    "valid_data_path": "/opt/ml/input/data/train/valid_no_ner.tsv",
+    "train_args": {
+        "save_total_limit": 2,
+        "save_steps": 100,
+        "num_train_epochs": 100,
+        "learning_rate": 1e-5,
+        "per_device_train_batch_size": 32,
+        "per_device_eval_batch_size": 32,
+        "warmup_steps": 300,
+        "weight_decay": 0.01,
+        "logging_dir": "./logs",
+        "logging_steps": 100,
+        "evaluation_strategy": "steps",
+        "eval_steps": 100,
+        "dataloader_num_workers": 4,
+        "label_smoothing_factor": 0.5,
+        "load_best_model_at_end": "True"
+    },
+    "early_stopping_patience": 10
+}
