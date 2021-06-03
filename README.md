@@ -1,4 +1,4 @@
-# [Stage 2] Entity Relationship Recognition Using KLUE Dataset
+# [Stage 2] Entity Relationship Recognition using KLUE Dataset
 
 **홍승우 T1226**
 
